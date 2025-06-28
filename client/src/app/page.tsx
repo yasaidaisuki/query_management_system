@@ -1,17 +1,13 @@
 import Image from "next/image";
 import TableView from "@/components/TableView";
 import axios from "axios";
+import fetchData from "@/utils/fetchData";
 
 export default async function Home() {
 
   // fetch overhead data using axios
   // done in the page to reduce client-side fetching
-  const data = await axios
-        .get("http://localhost:8080/form-data") // your Fastify backend endpoint
-        .then((response) => {
-          return response.data.data.formData
-        })
-        .catch((err) => console.log("error"));
+  const data = await fetchData();
 
   return (
     <div className="w-full h-full">
