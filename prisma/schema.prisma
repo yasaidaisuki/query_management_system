@@ -19,13 +19,18 @@ model FormData {
   @@map("form_data")
 }
 
+enum Status {
+  OPEN
+  CLOSED
+}
+
 model QueryData {
   id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   title       String
   description String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
-  status      String   @default("OPEN")
+  status      Status   @default(OPEN)
   formData    FormData @relation(fields: [formDataID], references: [id])
   formDataID  String   @unique @db.Uuid
   

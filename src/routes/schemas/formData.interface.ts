@@ -9,8 +9,8 @@ export interface IQueryData {
   id: string
   title: string
   description: string | null
-  createdAt: Date
-  updatedAt: Date
+  createdAt: Date | string
+  updatedAt: Date | string
   status: string
   formDataID: string
 }
