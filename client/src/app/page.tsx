@@ -9,6 +9,8 @@ export default async function Home() {
   // done in the page to reduce client-side fetching
   const data = await fetchData();
 
+  console.log(data)
+
   return (
     <div className="w-full h-full">
       {data ? <TableView data={data}/> : null }
