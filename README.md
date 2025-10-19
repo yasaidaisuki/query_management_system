@@ -1,11 +1,11 @@
-## Design Architecture/Tech Stack
+## About 
+- Full-stack query management system demonstrating production patterns with 
+
 <img width="902" height="225" alt="image" src="https://github.com/user-attachments/assets/a32fe63b-f943-4c1a-875e-cb2a176d54b8" />
 
-## About 
-- Simple CRUD Fullstack - Query Management System
 
 ## Getting Started
-- copy the .env.example file into a .env file
+- Set up your own .env for your local Postgres database **(MUST HAVE POSTGRES INSTALLED)**
 - `docker-compose build`
 - `docker-compose up`
 - `npm run migrate`
